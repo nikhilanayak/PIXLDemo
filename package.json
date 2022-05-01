@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.0",
+    "@tensorflow/tfjs": "^3.15.0",
+    "filereader": "^0.10.3",
+    "formidable": "^2.0.1",
+    "multiparty": "^4.2.3",
+    "next": "12.1.4",
+    "next-connect": "^0.12.2",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-dropdown": "^1.9.2",
+    "react-h5-audio-player": "^3.8.3",
+    "react-spinners": "^0.11.0",
+    "read-blob": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/multiparty": "^0.0.33",
+    "@types/node": "17.0.23",
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.4",
+    "typescript": "^4.6.3"
+  }
+}
