@@ -9,7 +9,7 @@ type Data = {
 	songs?: Array<string>
 }
 
-const directory = path.resolve("./public", "songs");
+//const directory = path.resolve("./public", "songs");
 
 export default function handler(
 	req: NextApiRequest,
@@ -19,8 +19,27 @@ export default function handler(
 	let data;
 
 	try{
-		const files = fs.readdirSync(directory);
-		res.status(200).json({songs: files});
+		//const files = fs.readdirSync(directory);
+		//res.status(200).json({songs: files});
+		res.status(200).json({
+			songs: [
+				"27YearsInSolitary_TheDaily.wav",
+				"Astrothunder_TravisScott.wav",
+				"BelieveWhatISay_KanyeWest.wav",
+				"BlueDanube_Strauss.wav",
+				"CovidMysteryInAfrica_TheDaily.wav",
+				"ExplicitTurban_Yeat.wav",
+				"FiveDumbSoundingBirds_NPR.wav",
+				"FurElise_Beethoven.wav",
+				"HowTwoFriendsBeatAmazon_TheDaily.wav",
+				"IgorsTheme_TylerTheCreator.wav",
+				"InTheHallOfTheMountainKing_Grieg.wav",
+				"Paranoid_KanyeWest.wav",
+				"TheMarriageOfFigaro_Mozart.wav",
+				"TheWarForTheRainforest_TheDaily.wav",
+				"WilliamTellOverture_Rossini.wav"
+			  ]
+		});
 	}
 	catch(err){
 		res.status(500).json({err: "Failed To Query Songs From Databsase"});
