@@ -88,8 +88,8 @@ function Home(){
 	function loadAudioFile(){
 		const codecDec = ["opus", "pixlopus", "ref", "aac"];
 		//setPlayerLink(`/songs/${currentAF}/${codecDec[currentCodec]}.wav`);
-		setPlayerLink(`https://storage.cloud.google.com/pixl-audiosamples/${currentAF}/${codecDec[currentCodec]}.wav`);
-		console.log(`https://storage.cloud.google.com/pixl-audiosamples/${currentAF}/${codecDec[currentCodec]}.wav`);
+		setPlayerLink(`https://storage.googleapis.com/pixl-audiosamples/${currentAF}/${codecDec[currentCodec]}.wav`);
+		console.log(`https://storage.googleapis.com/pixl-audiosamples/${currentAF}/${codecDec[currentCodec]}.wav`);
 	}
 
 	function handleSliderChange(e: any){
