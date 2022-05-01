@@ -66,14 +66,17 @@ function Home(){
 						.replace(".wav", "")
 						.replace("_", " by ")
 						.replace(/([A-Z])/g, " $1")
+						//@ts-ignore
 						.replace(/%./, (s) => s.toUpperCase)
 					);
 
 					clean.push(c);
+					// @ts-ignore
 					realNames[c] = song;
 				}
 
 
+				// @ts-ignore
 				setAudioFiles(clean);
 			}
 		});
@@ -89,7 +92,7 @@ function Home(){
 		console.log(`https://storage.cloud.google.com/pixl-audiosamples/${currentAF}/${codecDec[currentCodec]}.wav`);
 	}
 
-	function handleSliderChange(e){
+	function handleSliderChange(e: any){
 		currentCodec = e.target.value;
 		loadAudioFile();
 		return;
@@ -139,6 +142,7 @@ function Home(){
 				<Dropdown
 					options={audioFiles}
 					onChange={(e) => {
+						//@ts-ignore
 						currentAF = realNames[e.value];
 						console.log(e.value);
 						loadAudioFile();	
